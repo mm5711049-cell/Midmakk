@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المقاولات | مدماك الجنوب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-luxuryBlack text-white font-cairo transition-all duration-300">
+
+<header class="glass fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 gap-4">
+    <img src="logo.png" class="h-12">
+    <nav class="flex flex-wrap items-center gap-6">
+      <a href="index.html" class="nav-link">الرئيسية</a>
+      <a href="about.html" class="nav-link">من نحن</a>
+      <a href="construction_pro.html" class="nav-link">المقاولات</a>
+      <button id="toggleLang" class="btn-gold">EN</button>
+    </nav>
+  </div>
+</header>
+
+<section class="min-h-screen flex items-center justify-center px-6 pt-32">
+  <div class="glass p-14 rounded-3xl max-w-4xl hover-3d text-center">
+    <h1 class="text-4xl font-bold text-premiumGold mb-8" id="contractTitle">أعمال المقاولات وبناء العظم</h1>
+    <p class="text-gray-300 leading-loose" id="contractDesc">
+      تنفيذ احترافي للهيكل الإنشائي، التزام تام بالكود السعودي الجديد، إشراف هندسي، وجودة مضمونة.
+    </p>
+  </div>
+</section>
+
+<script>
+  const toggleLang = document.getElementById('toggleLang');
+  let currentLang = 'ar';
+
+  toggleLang.addEventListener('click', () => {
+    if(currentLang==='ar'){
+      document.documentElement.lang='en';
+      document.documentElement.dir='ltr';
+      document.getElementById('contractTitle').textContent='Contracting & Skeleton Works';
+      document.getElementById('contractDesc').textContent='Professional execution of structural frameworks, full compliance with the new Saudi code, engineering supervision, and guaranteed quality.';
+      toggleLang.textContent='AR';
+      currentLang='en';
+    }else{
+      document.documentElement.lang='ar';
+      document.documentElement.dir='rtl';
+      document.getElementById('contractTitle').textContent='أعمال المقاولات وبناء العظم';
+      document.getElementById('contractDesc').textContent='تنفيذ احترافي للهيكل الإنشائي، التزام تام بالكود السعودي الجديد، إشراف هندسي، وجودة مضمونة.';
+      toggleLang.textContent='EN';
+      currentLang='ar';
+    }
+  });
+</script>
+
+</body>
+</html>
