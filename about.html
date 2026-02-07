@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن | مؤسسة مدماك الجنوب العقارية</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-luxuryBlack text-white font-cairo transition-all duration-300">
+
+<header class="glass fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 gap-4">
+    <img src="logo.png" class="h-12">
+    <nav class="flex flex-wrap items-center gap-6">
+      <a href="index.html" class="nav-link">الرئيسية</a>
+      <a href="about.html" class="nav-link">من نحن</a>
+      <a href="construction_pro.html" class="nav-link">المقاولات</a>
+      <button id="toggleLang" class="btn-gold">EN</button>
+    </nav>
+  </div>
+</header>
+
+<section class="pt-40 pb-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="glass p-16 rounded-3xl hover-3d text-center">
+      <h1 class="text-5xl font-bold text-premiumGold mb-8" id="aboutTitle">من نحن</h1>
+      <p class="text-gray-300 text-lg leading-loose max-w-3xl mx-auto" id="aboutDesc">
+        مؤسسة مدماك الجنوب العقارية مؤسسة وطنية متخصصة في التطوير والاستثمار العقاري وأعمال المقاولات، نعمل برؤية حديثة تجمع بين الفخامة، الجودة، والالتزام بالمعايير الهندسية المعتمدة في المملكة العربية السعودية.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="pb-24 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div class="glass p-12 rounded-2xl hover-3d" id="visionCard">
+      <h3 class="text-2xl font-bold text-premiumGold mb-4">رؤيتنا</h3>
+      <p class="text-gray-300 leading-relaxed">
+        أن نكون الخيار الأول في التطوير العقاري في الجنوب، من خلال مشاريع نوعية تحقق قيمة استثمارية مستدامة.
+      </p>
+    </div>
+
+    <div class="glass p-12 rounded-2xl hover-3d" id="missionCard">
+      <h3 class="text-2xl font-bold text-premiumGold mb-4">رسالتنا</h3>
+      <p class="text-gray-300 leading-relaxed">
+        تقديم حلول عقارية متكاملة وفق أعلى معايير الجودة والاحتراف، وبما يتوافق مع الكود السعودي الجديد.
+      </p>
+    </div>
+
+    <div class="glass p-12 rounded-2xl hover-3d" id="valuesCard">
+      <h3 class="text-2xl font-bold text-premiumGold mb-4">قيمنا</h3>
+      <p class="text-gray-300 leading-relaxed">
+        الجودة – الشفافية – الالتزام – بناء شراكات طويلة الأمد مع عملائنا.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="glass py-10 text-center text-gray-400">
+  © 2026 مؤسسة مدماك الجنوب العقارية — جميع الحقوق محفوظة
+</footer>
+
+<script>
+  const toggleLang = document.getElementById('toggleLang');
+  let currentLang = 'ar';
+
+  toggleLang.addEventListener('click', () => {
+    if(currentLang === 'ar') {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+      document.getElementById('aboutTitle').textContent = 'About Us';
+      document.getElementById('aboutDesc').textContent = 'Madmak South Real Estate is a national company specializing in real estate development, investment, and contracting, delivering modern luxury, quality, and adherence to Saudi engineering standards.';
+      document.getElementById('visionCard').querySelector('h3').textContent = 'Our Vision';
+      document.getElementById('visionCard').querySelector('p').textContent = 'To be the leading choice in real estate development in the south, through high-value sustainable projects.';
+      document.getElementById('missionCard').querySelector('h3').textContent = 'Our Mission';
+      document.getElementById('missionCard').querySelector('p').textContent = 'Providing integrated real estate solutions with the highest quality standards, fully compliant with the new Saudi code.';
+      document.getElementById('valuesCard').querySelector('h3').textContent = 'Our Values';
+      document.getElementById('valuesCard').querySelector('p').textContent = 'Quality – Transparency – Commitment – Building long-term partnerships with our clients.';
+      toggleLang.textContent = 'AR';
+      currentLang = 'en';
+    } else {
+      document.documentElement.lang = 'ar';
+      document.documentElement.dir = 'rtl';
+      document.getElementById('aboutTitle').textContent = 'من نحن';
+      document.getElementById('aboutDesc').textContent = 'مؤسسة مدماك الجنوب العقارية مؤسسة وطنية متخصصة في التطوير والاستثمار العقاري وأعمال المقاولات، نعمل برؤية حديثة تجمع بين الفخامة، الجودة، والالتزام بالمعايير الهندسية المعتمدة في المملكة العربية السعودية.';
+      document.getElementById('visionCard').querySelector('h3').textContent = 'رؤيتنا';
+      document.getElementById('visionCard').querySelector('p').textContent = 'أن نكون الخيار الأول في التطوير العقاري في الجنوب، من خلال مشاريع نوعية تحقق قيمة استثمارية مستدامة.';
+      document.getElementById('missionCard').querySelector('h3').textContent = 'رسالتنا';
+      document.getElementById('missionCard').querySelector('p').textContent = 'تقديم حلول عقارية متكاملة وفق أعلى معايير الجودة والاحتراف، وبما يتوافق مع الكود السعودي الجديد.';
+      document.getElementById('valuesCard').querySelector('h3').textContent = 'قيمنا';
+      document.getElementById('valuesCard').querySelector('p').textContent = 'الجودة – الشفافية – الالتزام – بناء شراكات طويلة الأمد مع عملائنا.';
+      toggleLang.textContent = 'EN';
+      currentLang = 'ar';
+    }
+  });
+</script>
+
+</body>
+</html>
