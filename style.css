@@ -1,0 +1,55 @@
+body{background:#050505;font-family:'Cairo',sans-serif}
+
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 10px 40px rgba(0,0,0,0.7)
+}
+
+.nav-link{
+  color:#c9a24d;
+  transition:.3s
+}
+.nav-link:hover{
+  text-shadow:0 0 14px rgba(230,195,106,.9)
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,#e6c36a,#b8962e);
+  padding:14px 34px;
+  border-radius:9999px;
+  color:#050505;
+  font-weight:700;
+  transition:.3s
+}
+.btn-gold:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 35px rgba(230,195,106,.45)
+}
+
+.section-title{
+  font-size:2.4rem;
+  font-weight:700;
+  color:#c9a24d;
+  text-align:center
+}
+
+.card{
+  padding:44px;
+  text-align:center;
+  font-size:1.2rem
+}
+
+.hover-3d{
+  transition:.4s
+}
+.hover-3d:hover{
+  transform:perspective(1200px) rotateX(6deg) rotateY(-6deg) scale(1.06)
+}
+
+/* Responsive adjustments */
+@media(max-width:768px){
+  .section-title{font-size:2rem}
+  .card{padding:24px;font-size:1rem}
+}
